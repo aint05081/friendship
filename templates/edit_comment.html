@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Comment</title>
+</head>
+<body>
+    <h1>Edit Comment</h1>
+    <form method="POST">
+        <textarea name="content" required>{{ comment.content }}</textarea>
+        <button type="submit">Update</button>
+    </form>
+    <a href="/post/{{ comment.post_id }}">Back to Post</a>
+</body>
+</html>

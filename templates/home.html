@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to the Blog & Chat Platform</h1>
+    <nav>
+        <a href="/create_post">Create a New Post</a>
+        <a href="/chat">Go to Chat</a>
+        <a href="/logout">Logout</a>
+    </nav>
+    <h2>Posts</h2>
+    <ul>
+        {% for post in posts %}
+        <li>
+            <strong>{{ post.title }}</strong> - {{ post.content }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

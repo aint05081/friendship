@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+</head>
+<body>
+    <h1>{{ user.username }}'s Page</h1>
+    <p>Favorite Color: <span style="color: {{ user.color }}">{{ user.color }}</span></p>
+    <h2>Your Posts</h2>
+    <ul>
+        {% for post in posts %}
+        <li>
+            <strong>{{ post.title }}</strong> - {{ post.content }} ({{ post.date_posted }})
+        </li>
+        {% else %}
+        <p>No posts yet. Create a new one!</p>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
