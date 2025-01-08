@@ -161,8 +161,10 @@ def edit_comment(comment_id):
         return redirect(f'/post/{comment.post_id}')
     return render_template('edit_comment.html', comment=comment)
 
+import os
+
 if __name__ == '__main__':
-    with app.app_context():
-        db.create_all()  # 데이터베이스 테이블 생성
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # 기본 포트를 5000으로 설정
+    app.run(host='0.0.0.0', port=port, debug=True)
+
 
