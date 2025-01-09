@@ -14,9 +14,9 @@
     <ul>
         {% for post in posts %}
         <li>
-            <strong>{{ post.title }}</strong> - {{ post.content }}
+            <a href="/post/{{ post.id }}"><strong>{{ post.title }}</strong></a> - {{ post.content }}
         </li>
         {% endfor %}
-    </ul>
+    </ul>    
 </body>
 </html>
